@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import "./index.scss";
 
-const ProductImages = () => {
+interface IProps {
+  openLightbox?: () => void;
+}
+
+const ProductImages = ({openLightbox}: IProps) => {
   const [currentImg, setCurrentImg] = useState(1);
   const imgNum = 4;
 
@@ -21,12 +25,18 @@ const ProductImages = () => {
     }
   }
 
+  const handleOpenLightbox = () => {
+    if (openLightbox) {
+      openLightbox();
+    }
+  }
+
   return (
     <div>
       <div className="products-container">
         <div className="main-image">
           <img onClick={handlePrevImg} src="icon-previous.svg" alt="Icon Previous" className='icon prev-icon'/>
-          <img src={`image-product-${currentImg}.jpg`} alt="Main Product" />
+          <img onClick={handleOpenLightbox} src={`image-product-${currentImg}.jpg`} alt="Main Product" />
           <img onClick={handleNextImg} src="icon-next.svg" alt="Icon Next" className='icon next-icon'/>
         </div>
         <div className="other-images d-none d-lg-flex justify-content-between">

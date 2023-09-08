@@ -46,3 +46,55 @@ a {
 .active {
     border-bottom: 3px solid $orange;
 }
+
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+
+// MODAL
+.ms-modal {
+    .modal-image {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+
+        .btn-close-modal {
+            width: 25px;
+            margin-bottom: 10px;
+
+            &:hover {
+                background-color: $orange;
+            }
+        }
+
+        .products-container {
+            width: 500px;
+
+            .other-images {
+
+                img:hover {
+                    filter: brightness(120%);
+                    transition: filter 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .5);
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+
+        &.modal-active {
+            opacity: 1;
+        }
+    }
+}
