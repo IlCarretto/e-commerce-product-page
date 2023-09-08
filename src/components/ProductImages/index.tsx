@@ -26,7 +26,7 @@ const ProductImages = () => {
       <div className="products-container">
         <div className="main-image">
           <img onClick={handlePrevImg} src="icon-previous.svg" alt="Icon Previous" className='icon prev-icon'/>
-          <img src={`image-product-${currentImg}.jpg`} alt="Main Product Image" />
+          <img src={`image-product-${currentImg}.jpg`} alt="Main Product" />
           <img onClick={handleNextImg} src="icon-next.svg" alt="Icon Next" className='icon next-icon'/>
         </div>
         <div className="other-images d-none d-lg-flex justify-content-between">
