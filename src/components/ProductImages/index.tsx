@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import "./index.scss";
 
 const ProductImages = () => {
-  const [isSmScreen, setIsSmScreen] = useState(false);
   const [currentImg, setCurrentImg] = useState(1);
   const imgNum = 4;
 

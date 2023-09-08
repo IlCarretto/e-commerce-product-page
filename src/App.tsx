@@ -6,15 +6,10 @@ import Header from './components/Header';
 import ProductImages from './components/ProductImages';
 import Product from './components/Product';
 import { cartReducer } from './reducer/useCartReducer';
-import { ICartItem } from './types/cartType';
 
 function App() {
 
   const [state, dispatch] = useReducer(cartReducer, []);
-
-  useEffect(() => {
-    console.log(state);
-  }, [state])
 
   return (
     <div className="App">

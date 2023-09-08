@@ -41,7 +41,7 @@ const Product = ({dispatch}: IProps) => {
               </button>
           </div>
           <button onClick={() => handleAddItem(itemNum)} className='btn btn-add mt-3 mt-sm-0'>
-            <img src="icon-cart.svg" alt="Icon Cart" className='icon-cart-white'/>
+            <img src="icon-cart.svg" alt="Icon Cart Button" className='icon-cart-white'/>
             <span>Add to cart</span>
           </button>
       </div>

@@ -56,7 +56,7 @@ const Header = ({dispatch, state}: IProps) => {
                     <ul>
                     {links.map((link, index) => (
                         <li key={index}>
-                            <a>{link}</a>
+                            <a href="#">{link}</a>
                         </li>
                     ))}
                     </ul>
@@ -77,7 +77,7 @@ const Header = ({dispatch, state}: IProps) => {
                         {state.length > 0 ? (
                             <>
                             <div className='full-cart'>
-                                <img src="image-product-1-thumbnail.jpg" alt="Image Product" />
+                                <img src="image-product-1-thumbnail.jpg" alt="Image Product Cart" />
                                 <div>
                                     <p>{state[0].name}</p>
                                     <span>${state[0].price?.toFixed(2)} x {state.length}</span>
