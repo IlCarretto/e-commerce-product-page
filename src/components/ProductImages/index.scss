@@ -1,0 +1,82 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.products-container {
+
+    .main-image {
+        position: relative;
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+
+            @include media-max-sm() {
+                border-radius: 0px;
+            }
+
+            @include media-min-xs() {
+                padding: 1rem;
+                border-radius: 20px;
+            }
+
+            @include media-min-lg() {
+                padding: 0;
+                border-radius: 10px;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            top: calc(50% - 10px);
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 8px;
+
+            @include media-min-xs() {
+                border: 1px solid black;
+            }
+
+            @include media-min-lg() {
+                border: none;
+                display: none;
+            }
+        }
+
+        .prev-icon {
+            left: 10px;
+        }
+
+        .next-icon {
+            right: 10px;
+        }
+
+        @include media-min-lg() {
+
+            &:hover .prev-icon,
+            &:hover .next-icon {
+                display: block;
+            }
+        }
+    }
+
+    .other-images {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+
+        img {
+            border-radius: 10px;
+            width: calc(90% / 4);
+            opacity: 1;
+            transition: opacity .2s ease-in-out;
+
+            &:hover {
+                border: 2px solid $orange;
+                opacity: .5;
+                transition: opacity .2s ease-in-out;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// RESET
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.App {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+main {
+
+    @include media-min-lg() {
+        padding: 3rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+img {
+    cursor: pointer;
+}
+
+// COMMON
+.active {
+    border-bottom: 3px solid $orange;
+}
